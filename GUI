@@ -6,6 +6,8 @@ local b = w:CreateFolder("Remotes") -- Creates the folder(U will put here your b
 
 local c = w:CreateFolder("Etc") -- Creates the folder(U will put here your buttons,etc)
 
+local d = w:CreateFolder("Teleport") -- Creates the folder(U will put here your buttons,etc)
+
 b:Label("BETA STAGE. MADE BY DANISH",{
     TextSize = 10; -- Self Explaining
     TextColor = Color3.fromRGB(255,255,255); -- Self Explaining
@@ -85,6 +87,40 @@ c:Button("Hide Username",function()
         end
     
 end)
+
+d:Button("Sanatorium Front",function()
+    game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-4145.70508, 402.506317, 954.528076)
+    
+end)
+
+d:Button("Sanatorium Back",function()
+    game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-4238.13086, 419.087433, 1055.21741)
+    
+end)
+
+d:Button("Kitchen",function()
+    game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-4096.99512, 443.203644, 1054.93286)
+    
+end)
+
+d:Button("Kitchen",function()
+    game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-4048.90845, 442.270477, 1196.59839)
+    
+end)
+
+d:Button("Developer Base & Imperial's Activity Monitor",function()
+    game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-3817.24097, 70.3669052, 148.974365)
+    
+end)
+
+d:Button("Boat (Near)",function()
+    game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2919.22852, 50.4589882, 1096.00989)
+    
+end)
+
+
+
+
 
 --b:DestroyGui()
 
