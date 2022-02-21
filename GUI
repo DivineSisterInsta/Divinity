@@ -8,7 +8,7 @@ local c = w:CreateFolder("Etc") -- Creates the folder(U will put here your butto
 
 local d = w:CreateFolder("Teleport") -- Creates the folder(U will put here your buttons,etc)
 
-local d = w:CreateFolder("Lunar Exclusive") -- Creates the folder(U will put here your buttons,etc)
+local e = w:CreateFolder("Lunar Exclusive") -- Creates the folder(U will put here your buttons,etc)
 
 -- REMOTES
 b:Label("BETA STAGE. MADE BY DANISH",{
