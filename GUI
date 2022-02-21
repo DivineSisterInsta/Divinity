@@ -8,6 +8,9 @@ local c = w:CreateFolder("Etc") -- Creates the folder(U will put here your butto
 
 local d = w:CreateFolder("Teleport") -- Creates the folder(U will put here your buttons,etc)
 
+local d = w:CreateFolder("Lunar Exclusive") -- Creates the folder(U will put here your buttons,etc)
+
+-- REMOTES
 b:Label("BETA STAGE. MADE BY DANISH",{
     TextSize = 10; -- Self Explaining
     TextColor = Color3.fromRGB(255,255,255); -- Self Explaining
@@ -64,6 +67,8 @@ b:Button("Regen Energy",function()
     
 end)
 
+-- ETC
+
 c:Label("HOW TO USE INSTA KILL? WAIT UNTILL YOU ARE AN ILL AND PRESS Y AROUND PEOPLE",{
     TextSize = 10; -- Self Explaining
     TextColor = Color3.fromRGB(255,255,255); -- Self Explaining
@@ -87,6 +92,59 @@ c:Button("Hide Username",function()
         end
     
 end)
+
+c:Button("Auto Wake Up",function()
+    while wait() do
+        if game:GetService("Players").LocalPlayer.Character.Ragdoll.Activate.Value then
+    local args = {
+        [1] = "WakeUp",
+        [2] = game:GetService("Players").LocalPlayer.Character
+    }
+    
+    game:GetService("ReplicatedStorage").Events.Ragdoll:FireServer(unpack(args))
+    end
+    end
+    
+end)
+
+c:Button("Unlimited Energy + No Fall Ragdoll",function()
+    local mt = getrawmetatable(game)
+setreadonly(mt,false)
+local old = mt.__namecall
+mt.__namecall = function(...)
+    local method= getnamecallmethod() or get_namecall_method()
+    local args = {...}
+    if method == "FireServer" and args[2] == "Vagour" then
+          return nil
+    end
+    return old(...)
+end
+local mt = getrawmetatable(game)
+setreadonly(mt,false)
+local old = mt.__namecall
+mt.__namecall = function(...)
+    local method= getnamecallmethod() or get_namecall_method()
+    local args = {...}
+    if method == "FireServer" and args[2] == "FallDamage" then
+          return nil
+    end
+    return old(...)
+end
+local mt = getrawmetatable(game)
+setreadonly(mt,false)
+local old = mt.__namecall
+mt.__namecall = function(...)
+    local method= getnamecallmethod() or get_namecall_method()
+    local args = {...}
+    if method == "FireServer" and args[2] == "Ragdoll" then
+          return nil
+    end
+    return old(...)
+end
+    
+end)
+
+-- TELEPORT
 
 d:Button("Sanatorium Front",function()
     game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-4145.70508, 402.506317, 954.528076)
